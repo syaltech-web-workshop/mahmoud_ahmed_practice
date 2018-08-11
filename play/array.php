@@ -18,7 +18,18 @@ $age = ["mahmoud" => "26", "mohamed" => "27", "abdo" => "27"];
 //$array = ["color" => ["blue", "red", "green"],
 //    "size"  => ["small", "medium", "large"]];
 
-$array = ["0", "0", 1, 3];
+//$array = ["0", "0", 1, 3];
+//
+//print_r(array_keys($array, false));
 
-print_r(array_keys($array, false));
+$array = [1.1, "hello", 1.1, "world", "hello"];
+print_r(array_count_values($array));
+
+//$arr = [1, 2];
+//
+//print_r($arr);
+
+//$arr[0] = 3;
+//print_r($arr);
+
 
