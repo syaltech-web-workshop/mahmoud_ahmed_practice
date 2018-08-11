@@ -43,7 +43,10 @@ function my_array_count_values($array)
 
 //$array = [1, 3, 1, 4, 3, 1];
 
-$array = [1.1, "hello", 1.1, "world", "hello"];
+//$array = [1.1, "hello", 1.1, "world", "hello"];
+
+$array = [0.0, "0", 1, 0, "0", 1];
+
 
 print_r(my_array_count_values($array));
 

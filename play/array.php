@@ -22,7 +22,9 @@ $age = ["mahmoud" => "26", "mohamed" => "27", "abdo" => "27"];
 //
 //print_r(array_keys($array, false));
 
-$array = [1.1, "hello", 1.1, "world", "hello"];
+//$array = [1.1, "hello", 1.1, "world", "hello"];
+
+$array = [0, '0', 1, 0, '0', 1];
 print_r(array_count_values($array));
 
 //$arr = [1, 2];
