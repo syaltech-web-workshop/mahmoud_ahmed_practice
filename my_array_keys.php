@@ -3,20 +3,19 @@
 
 function my_array_keys($array, $search_value = null, $strict = false)
 {
-    $keys = null;
+    $keys = [];
     foreach ($array as $key => $value) {
-        if(isset($search_value) && !$strict && $search_value == $value){
+        if(!$strict && $search_value == $value){
             echo "first case\n";
             $keys[] = $key;
-        } elseif (isset($search_value) && $strict && $search_value === $value){
+        } elseif ($strict && $search_value === $value){
             echo "second case\n";
             $keys[] = $key;
-        } elseif (!isset($search_value)){
+        } elseif (!isset($search_value) && func_num_args() < 3){
             echo "third case\n";
             $keys[] = $key;
         }
     }
-    if(!$keys) return [];
     return $keys;
 }
 
@@ -29,6 +28,13 @@ function my_array_keys($array, $search_value = null, $strict = false)
 //$array = ["color" => ["blue", "red", "green"],
 //    "size"  => ["small", "medium", "large"]];
 
-$array = ["0", "0", 1, 3];
+//$array = ["0", "0", 1, 3];
 
-print_r(my_array_keys($array, true));
+$array = [
+    'one' => null,
+    'two' => 0,
+    'hamada' => "lang",
+    'another_one' => 0
+];
+
+print_r(my_array_keys($array, null, false));
